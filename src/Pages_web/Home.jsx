@@ -1,10 +1,15 @@
 import Navbar from "../Components/Navbar"
+import Presentation_moi from "../Components/Presentation_moi"
+import Cadre_home from "../Components/Cadre_home"
 
 function Home() {
   return (
     <div>
-      <h1>Welcome to the Home Page</h1>
       <Navbar />
+      <Presentation_moi />
+      <Cadre_home />
+      <Cadre_home />
+      <Cadre_home />
     </div>
   )
 }
