@@ -1,33 +1,32 @@
-import { Link } from "react-router-dom"
-import bague from "../assets/images/logo_design/maBague.png"
+import { Link } from "react-router-dom";
+import bague from "../assets/images/logo_design/maBague.png";
 
-function Navbar() {
+function Navbar({ isDark = true }) {
+  // isDark détermine uniquement la couleur du texte, le blur et le bg restent les mêmes
+
+  const textColor = isDark ? 'text-white' : 'text-black';
+  const hoverColor = isDark ? 'hover:text-gray-300' : 'hover:text-gray-700';
+
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-white">
-      <ul className="flex justify-center gap-15 px-6 py-3 text-gray-600 text-sm">
+    <nav className={`fixed top-0 left-0 w-full z-50 backdrop-blur-sm bg-black/50`}>  
+      <ul className={`flex justify-center gap-15 px-6 py-3 text-sm ${textColor}`}>
         <li>
-          <Link to="/" className="hover:text-black transition">
+          <Link to="/" className={`transition ${hoverColor}`}>
             <img src={bague} alt="ma bague" className="w-6 rounded-full" />
           </Link>
         </li>
         <li>
-          <Link to="/about" className="hover:text-black transition">
-            À propos
-          </Link>
+          <Link to="/about" className={`transition ${hoverColor}`}>À propos</Link>
         </li>
         <li>
-          <Link to="/projects" className="hover:text-black transition">
-            Projets
-          </Link>
+          <Link to="/projects" className={`transition ${hoverColor}`}>Projets</Link>
         </li>
         <li>
-          <Link to="/contact" className="hover:text-black transition">
-            Contact
-          </Link>
+          <Link to="/contact" className={`transition ${hoverColor}`}>Contact</Link>
         </li>
       </ul>
     </nav>
   );
 }
 
-export default Navbar
+export default Navbar;
