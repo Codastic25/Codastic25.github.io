@@ -1,0 +1,22 @@
+# Workflow pour mettre à jour le projet React + Vite + GitHub Pages
+
+## 1. Travailler en local
+- Modifier les fichiers dans `src/` (JSX, CSS, etc.)
+- Vérifier les changements avec :
+  npm run dev
+- Voir le site localement sur http://localhost:5173/
+
+## 2. Préparer la production
+- Compiler le projet :
+  npm run build
+
+- Copier le contenu du build vers la racine pour GitHub Pages (user site) :
+  cp -r dist/* .
+
+## 3. Publier sur GitHub Pages
+- Ajouter et commit les fichiers build :
+  git add .
+  git commit -m "Deploy latest build"
+  git push
+
+## Ne pas oublier de remettre le index.html local avec les chemins src pour le npm run dev : 
