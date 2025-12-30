@@ -19,7 +19,7 @@ function Navbar({ isDark = true }) {
           <Link to="/about" className={`transition ${hoverColor}`}>À propos</Link>
         </li>
         <li>
-          <Link to="/projects" className={`transition ${hoverColor}`}>Mes projets</Link>
+          <Link to="/projects" className={`transition ${hoverColor}`}>Projets</Link>
         </li>
         <li>
           <Link to="/contact" className={`transition ${hoverColor}`}>Contact</Link>
