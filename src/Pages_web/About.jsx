@@ -1,12 +1,13 @@
 import Navbar from "../Components/Navbar"
 import Footer from "../Components/Footer"
+import Bulle_about from "../Components/Bulle_about"
 
 function About() {
   return (
     <div>
-        <Navbar />
-      <h1>About Me</h1>
-      <p>This is the About page of our website.</p>
+      <Navbar />
+      <Bulle_about text="Web developer" />
+      <Bulle_about text="Web designer" />
       <Footer />
     </div>
   )
